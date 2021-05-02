@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Finish1 : MonoBehaviour
+public class Finish5 : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene("Level 3");
+        SceneManager.LoadScene("Level 4");
     }
 }

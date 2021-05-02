@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 
-public class KillPlayer : MonoBehaviour
+public class KillPlayer3 : MonoBehaviour
 {
     AudioSource audioSource;
 
@@ -19,7 +19,7 @@ public class KillPlayer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GetComponent<AudioSource>().Play();
-            SceneManager.LoadScene("Level 1");
+            SceneManager.LoadScene("Level 3");
 
         }
     }

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class Player : MonoBehaviour
 {
     public Camera cam;
-    private const float JUMP_AMOUNT = 9f;
+    private const float JUMP_AMOUNT = 13f;
     private Rigidbody2D playerRigidBody2D;
     public float startFOV = 60f;
     public float maxFOV = 90f;
@@ -14,6 +16,12 @@ public class Player : MonoBehaviour
     public float speed;
     public float jump;
     private float moveInput;
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
 
     private void Awake()
@@ -27,6 +35,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Jump();
+            GetComponent<AudioSource>().Play();
         }
 
         moveInput = Input.GetAxis("Horizontal");
