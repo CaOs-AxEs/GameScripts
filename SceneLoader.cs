@@ -19,4 +19,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
 }
